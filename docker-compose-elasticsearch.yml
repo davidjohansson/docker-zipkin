@@ -10,6 +10,8 @@ services:
   # Run Elasticsearch instead of MySQL
   storage:
     image: openzipkin/zipkin-elasticsearch:1.19.0
+    ports:
+      - "9201:9200"
     container_name: elasticsearch
 
   # Switch storage type to Elasticsearch
